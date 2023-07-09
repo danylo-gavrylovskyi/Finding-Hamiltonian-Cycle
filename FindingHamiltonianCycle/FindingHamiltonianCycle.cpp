@@ -24,7 +24,7 @@ public:
         cout << "\nThe generated random graph is: " << endl;
         for (int i = 0; i < numOfVertices; i++) {
             count = 0;
-            cout << "\t" << i + 1 << "-> { ";
+            cout << "\t" << i << "-> { ";
             for (int j = 0; j < numOfEdges; j++) {
                 if (edge[j][0] == i + 1) {
                     cout << edge[j][1] << " ";
