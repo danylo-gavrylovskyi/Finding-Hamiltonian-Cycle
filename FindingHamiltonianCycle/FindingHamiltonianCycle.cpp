@@ -19,7 +19,18 @@ public:
         l[x].push_back(y);
         l[y].push_back(x);
     }
-    void printGeneratedGraph() {
+    void PrintAdjList() {
+        for (int i = 0; i < numOfVertices; i++)
+        {
+            cout << "Vertex: " << i << "->";
+            for (int neighbour: l[i])
+            {
+                cout << neighbour << ",";
+            }
+            cout << endl;
+        }
+    }
+    void PrintGeneratedGraph() {
         int count;
         cout << "\nThe generated random graph is: " << endl;
         for (int i = 0; i < numOfVertices; i++) {
@@ -27,11 +38,11 @@ public:
             cout << "\t" << i << "-> { ";
             for (int j = 0; j < numOfEdges; j++) {
                 if (edge[j][0] == i + 1) {
-                    cout << edge[j][1] << " ";
+                    cout << edge[j][1] - 1 << " ";
                     count++;
                 }
                 else if (edge[j][1] == i + 1) {
-                    cout << edge[j][0] << " ";
+                    cout << edge[j][0] - 1 << " ";
                     count++;
                 }
                 else if (j == numOfEdges - 1 && count == 0)
@@ -61,7 +72,7 @@ int main()
     cin >> numOfEdges;
     int** edge = GenerateRandomGraph(numOfEdges, numOfVertices);
     Graph g(numOfEdges, numOfVertices, edge);
-    g.printGeneratedGraph();
+    g.PrintGeneratedGraph();
     bool** graph = ConvertToAdjMatrix(edge, numOfVertices, numOfEdges);
 
     auto start = steady_clock::now();

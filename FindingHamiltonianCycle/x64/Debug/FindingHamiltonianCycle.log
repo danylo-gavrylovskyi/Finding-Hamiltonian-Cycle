@@ -1,3 +1,3 @@
 ﻿  FindingHamiltonianCycle.cpp
-C:\Meine\C++\FindingHamiltonianCycle\FindingHamiltonianCycle\FindingHamiltonianCycle.cpp(90,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Meine\C++\FindingHamiltonianCycle\FindingHamiltonianCycle\FindingHamiltonianCycle.cpp(101,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   FindingHamiltonianCycle.vcxproj -> C:\Meine\C++\FindingHamiltonianCycle\x64\Debug\FindingHamiltonianCycle.exe
